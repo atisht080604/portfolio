@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionHeading from '../components/SectionHeading';
-import { User, ShieldCheck, MapPin, GraduationCap, Code2, Sparkles, CheckCircle2 } from 'lucide-react';
+import { User, ShieldCheck, MapPin, GraduationCap, Code2, Sparkles, CheckCircle2, FileText, Download } from 'lucide-react';
 
 export default function About() {
   return (
@@ -61,6 +61,18 @@ export default function About() {
                 <span className="text-accent-green font-bold block">ARTIFICIAL INTELLIGENCE &amp; MACHINE LEARNING</span>
               </div>
             </div>
+
+            {/* Resume Download Action Button */}
+            <a
+              href="/Atish_Thorat_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 w-full py-3 px-4 rounded-xl bg-accent-green text-black font-mono text-xs font-bold hover:bg-accent-green/90 transition-all flex items-center justify-center gap-2 shadow-lg"
+            >
+              <FileText size={15} />
+              <span>DOWNLOAD RESUME (PDF)</span>
+              <Download size={14} />
+            </a>
 
             {/* Quick Specialization Tags */}
             <div className="mt-6 pt-5 border-t border-white/10">

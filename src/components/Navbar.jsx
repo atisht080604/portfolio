@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Terminal, ChevronRight } from 'lucide-react';
+import { Menu, X, Terminal, ChevronRight, FileText } from 'lucide-react';
 
 const navItems = [
   { id: 'home', label: 'Home', code: '00' },
@@ -101,10 +101,22 @@ export default function Navbar({ activeSection, scrolled }) {
             })}
           </nav>
 
-          {/* System Status & Mobile Trigger */}
-          <div className="flex items-center gap-4">
+          {/* System Status, Resume Pill & Mobile Trigger */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Resume Button */}
+            <a
+              href="/Atish_Thorat_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent-green/10 border border-accent-green/30 text-accent-green hover:bg-accent-green hover:text-black font-mono text-xs font-bold transition-all shadow-[0_0_12px_rgba(183,255,107,0.15)]"
+              title="View / Download Resume (PDF)"
+            >
+              <FileText size={13} />
+              <span>RESUME</span>
+            </a>
+
             {/* Status Indicator */}
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#141414] border border-white/10 font-mono text-xs">
+            <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#141414] border border-white/10 font-mono text-xs">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-green" />
@@ -177,6 +189,17 @@ export default function Navbar({ activeSection, scrolled }) {
                 );
               })}
             </div>
+
+            {/* Mobile Resume Button */}
+            <a
+              href="/Atish_Thorat_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-accent-green text-black font-mono text-xs font-bold hover:bg-accent-green/90 transition-all mt-6 shadow-md"
+            >
+              <FileText size={15} />
+              <span>VIEW RESUME (PDF)</span>
+            </a>
           </div>
 
           <div className="pt-6 border-t border-white/10 space-y-3 font-mono text-xs">

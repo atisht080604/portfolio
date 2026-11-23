@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Terminal, Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowUp, Terminal, Github, Linkedin, Mail, MapPin, Phone, FileText } from 'lucide-react';
 import { socialLinks } from '../data/socialLinks';
 
 export default function Footer() {
@@ -60,11 +60,14 @@ export default function Footer() {
                 { label: '02 // Technical Arsenal', href: '#expertise' },
                 { label: '03 // Project Archive', href: '#projects' },
                 { label: '04 // Academic Record', href: '#education' },
-                { label: '05 // Communication', href: '#contact' }
+                { label: '05 // Communication', href: '#contact' },
+                { label: '06 // Resume (PDF)', href: '/Atish_Thorat_Resume.pdf', external: true }
               ].map((link, idx) => (
                 <li key={idx}>
                   <a
                     href={link.href}
+                    target={link.external ? '_blank' : undefined}
+                    rel={link.external ? 'noopener noreferrer' : undefined}
                     className="text-secondary-text hover:text-accent-green transition-colors inline-block"
                   >
                     {link.label}

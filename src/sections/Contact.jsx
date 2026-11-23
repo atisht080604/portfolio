@@ -139,6 +139,27 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* Resume / Curriculum Vitae Card */}
+              <div className="p-4 rounded-xl bg-black/40 border border-white/5 space-y-2">
+                <span className="font-mono text-[10px] uppercase text-secondary-text tracking-wider block">
+                  CURRICULUM VITAE
+                </span>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-mono text-xs sm:text-sm text-primary-text font-semibold truncate">
+                    Atish Thorat Resume.pdf
+                  </span>
+                  <a
+                    href="/Atish_Thorat_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2.5 py-1 rounded-lg bg-accent-green/10 border border-accent-green/30 text-accent-green hover:bg-accent-green hover:text-black font-mono text-xs font-bold transition-all shrink-0 flex items-center gap-1.5"
+                  >
+                    <span>VIEW PDF</span>
+                    <ExternalLink size={12} />
+                  </a>
+                </div>
+              </div>
+
               {/* Location Card */}
               <div className="p-4 rounded-xl bg-black/40 border border-white/5 flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-accent-blue/10 text-accent-blue border border-accent-blue/20">

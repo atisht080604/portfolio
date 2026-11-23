@@ -1,6 +1,6 @@
 import React from 'react';
 import Terminal from '../components/Terminal';
-import { ArrowDown, Terminal as TerminalIcon, ChevronRight } from 'lucide-react';
+import { ArrowDown, FileText, ChevronRight } from 'lucide-react';
 
 export default function Hero() {
   const scrollTo = (id) => {
@@ -91,9 +91,19 @@ export default function Hero() {
                 <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
 
+              <a
+                href="/Atish_Thorat_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 rounded-xl bg-[#141414] border border-white/15 text-primary-text font-mono text-xs sm:text-sm font-bold hover:border-accent-green hover:text-accent-green transition-all flex items-center gap-2 shadow-sm"
+              >
+                <FileText size={15} className="text-accent-green" />
+                <span>RESUME (PDF)</span>
+              </a>
+
               <button
                 onClick={() => scrollTo('contact')}
-                className="px-6 py-3.5 rounded-xl bg-[#141414] border border-white/15 text-primary-text font-mono text-xs sm:text-sm font-bold hover:border-accent-green hover:text-accent-green transition-all"
+                className="px-6 py-3.5 rounded-xl bg-transparent border border-white/10 text-secondary-text font-mono text-xs sm:text-sm font-medium hover:text-white hover:border-white/30 transition-all"
               >
                 CONTACT ME
               </button>
